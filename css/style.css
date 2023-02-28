@@ -1,165 +1,123 @@
 * {
   box-sizing: border-box;
+}
+
+.header {
+  background-color: #e6d450;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+}
+
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+.addBtn:hover {
+  background-color: #bbb;
+}
+
+img {
+  background-color: #e6e7ac;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+ul {
   margin: 0;
   padding: 0;
 }
 
-body {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  align-items: center
-}
-
-.container {
-  display: flex;
-  justify-content: center;
+ul li {
+  cursor: pointer;
   position: relative;
-  flex-direction: column;
-}
-
-header {
-  width: 800px;
-  height: 250px;
-  background-color: rgb(233, 158, 19);
-  flex-direction: column;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
-
-header img {
-  width: 300px;
-  background-color: aliceblue;
-  margin-top: 55px;
-
-}
-
-h2 {
-  text-align: center;
-  color: aliceblue;
-  font-size: 35px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  margin: 15px 0 15px 0px;
-}
-
-.entering {
-  display: flex;
-  flex-direction: row;
-
-  margin-bottom: 30px;
-}
-
-#textbox {
-  width: 600px;
-  height: 50px;
-
-
-}
-
-#textbox:focus {
-  border: 0;
-  outline: none;
-}
-
-input[type=text] {
+  padding: 12px 8px 12px 40px;
+  background: #eee;
   font-size: 18px;
-  padding-left: 10px;
-
-}
-
-
-
-
-#add-btn {
-  width: 100px;
-  height: 50px;
-  font-size: 20px;
-  background-color: rgb(142, 142, 142);
-  color: aliceblue;
-  border: 0;
-  cursor: pointer;
-}
-
-#add-btn:hover {
-  background-color: rgb(216, 216, 216);
-  color: rgb(110, 110, 110);
-  transition-duration: 0.3s;
-}
-
-#add-btn:active {
-  transform: scale(.95);
-}
-
-
-main {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: auto;
-
-}
-
-
-
-.do-element {
-  background-color: rgb(213, 213, 213);
-  padding: 15px 5px;
-
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  display: none;
-  border: 0px solid rgb(51, 50, 50);
-  font-size: 18px;
-  position: relative;
-  display: none;
-  flex-direction: row;
-  cursor: pointer;
-
-
-}
-
-.do-element:hover {
-  background-color: aliceblue;
-  transition-duration: 0.5s;
-}
-
-.logo {
-  width: 30px;
-  height: 30px;
-
-
-  cursor: pointer;
-}
-
-
-
-.delete {
-  color: red;
-  margin-top: 2px;
-}
-
-#do {
-  width: 700px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  position: relative;
-
+  transition: 0.2s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   word-wrap: break-word;
+  padding-right: 40px;
+}
+
+ul li:nth-child(2n) {
+  background: #dadada;
+}
+
+ul li:hover {
+  background: rgb(224, 224, 224);
+}
+
+ul li.checked {
+  background: rgb(170, 170, 170);
+  color: #fff;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: rgb(236, 255, 229);
+  border-style: solid;
+  border-width: 0 3px 3px 0;
+  top: 13px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+.close {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  right: 0;
+  top: 0;
+  transform: translate(-15px, 14px);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
 
 }
 
-.logo {
-  visibility: hidden;
-}
+.close:hover {
+  background-color: #d77d7d;
+  color: white;
 
-.do-element:hover .logo {
-  visibility: visible;
-  transition-duration: 0.5s;
 }
